@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Restaurant.DAL.Models;
 
 namespace Restaurant.PL.Data
 {
@@ -9,5 +10,7 @@ namespace Restaurant.PL.Data
             : base(options)
         {
         }
+
+        public DbSet<Table> Tables { get; set; }
     }
 }
